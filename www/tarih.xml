@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="29.3.2">
+  <diagram name="Tarih Revize Akis" id="REVIZE-TARIH-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- START -->
+        <mxCell id="start" value="START" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="20" width="100" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- auto_init -->
+        <mxCell id="init" value="TARIH::auto_init()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- post? -->
+        <mxCell id="post" value="POST var mı?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="220" width="140" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- exists -->
+        <mxCell id="exists" value="Eski geçerli tarih var mı?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="340" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- delete -->
+        <mxCell id="delete" value="delete_old()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="300" y="450" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- validate -->
+        <mxCell id="validate" value="validate(start, end)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="540" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- valid? -->
+        <mxCell id="valid" value="Geçerli mi?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="610" width="140" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- error -->
+        <mxCell id="error" value="collect_error(...)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="630" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- save -->
+        <mxCell id="save" value="save(start, end)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="300" y="740" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- report -->
+        <mxCell id="report" value="report_date()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="300" y="820" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="e1" edge="1" parent="1" source="start" target="init"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init" target="post"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e3" edge="1" parent="1" source="post" target="exists"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e4" edge="1" parent="1" source="exists" target="delete"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="exists" target="validate"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e6" edge="1" parent="1" source="delete" target="validate"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e7" edge="1" parent="1" source="validate" target="valid"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e8" edge="1" parent="1" source="valid" target="error"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="valid" target="save"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e10" edge="1" parent="1" source="save" target="report"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

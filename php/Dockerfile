@@ -1,19 +1,19 @@
-FROM debian:13
+FROM php:8.3-fpm
 
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt update && apt install -y \
-    php8.3-fpm \
-    php8.3-cli \
-    php8.3-mysql \
-    php8.3-curl \
-    php8.3-gd \
-    php8.3-mbstring \
-    php8.3-xml \
-    php8.3-zip \
-    php8.3-bcmath \
+# Gerekli sistem paketleri
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    zlib1g-dev \
+    libxml2-dev \
+    libonig-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /var/www/html
+# PHP uzantıları
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype \
+    && docker-php-ext-install pdo_mysql mysqli gd mbstring xml zip bcmath
 
-CMD ["/usr/sbin/php-fpm8.3", "-F"]
+WORKDIR /var/www/html

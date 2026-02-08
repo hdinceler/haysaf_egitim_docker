@@ -1,0 +1,31 @@
+.sprite {
+  width: 64px;
+  height: 64px;
+  background-image: url('/public/img/ico/64px/css-sprites.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.anadolu-liseleri { background-position: -1px -1px; }
+.en-dusuk-yuzdelik { background-position: -67px -1px; }
+.en-yuksek-yuzdelik { background-position: -1px -67px; }
+.fen-liseleri { background-position: -67px -67px; }
+.ilce-bazli-okul-puanlari { background-position: -133px -1px; }
+.il-bazli-okul-puanlari { background-position: -133px -67px; }
+.gecmis-yil-taban-puanlari { background-position: -1px -133px; }
+.imam-hatip-liseleri { background-position: -67px -133px; }
+.kontenjan-bilgileri { background-position: -133px -133px; }
+.lgs-puan-simulasyonu { background-position: -199px -1px; }
+.lgs-calisma-plani-hazirla { background-position: -199px -67px; }
+.lgs-takvimi { background-position: -199px -133px; }
+.lgs-tercih-robotu { background-position: -1px -199px; }
+.lgs-ye-kac-gun-kaldi { background-position: -67px -199px; }
+.mesleki-teknik-liseler { background-position: -133px -199px; }
+.okul-basari-siralamalari { background-position: -199px -199px; }
+.okul-turune-gore-puanlar { background-position: -265px -1px; }
+.puanima-gore-okullar { background-position: -265px -67px; }
+.son-3-yil-puan-karsilastirma { background-position: -265px -133px; }
+.sosyal-bilimler-liseleri { background-position: -265px -199px; }
+.tercih-kontrol-araci { background-position: -1px -265px; }
+.tercih-listesi-olustur { background-position: -67px -265px; }
+.tercih-simulasyonu { background-position: -133px -265px; }
+.yuzdelik-dilime-gore-okullar { background-position: -199px -265px; }

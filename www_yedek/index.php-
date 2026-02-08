@@ -1,0 +1,44 @@
+<?php
+    $gunler = [
+        ['isim' => 'pazartesi',  'baslik' => 'Pazartesi'],
+        ['isim' => 'sali',       'baslik' => 'Salı'],
+        ['isim' => 'carsamba',   'baslik' => 'Çarşamba'],
+        ['isim' => 'persembe',   'baslik' => 'Perşembe'],
+        ['isim' => 'cuma',       'baslik' => 'Cuma'],
+        ['isim' => 'cumartesi',  'baslik' => 'Cumartesi'],
+        ['isim' => 'pazar',      'baslik' => 'Pazar'],
+    ];
+
+?>
+<link rel="stylesheet" href="/static/css/grid.css">
+<script src="/static/js/js.js"></script>
+<div class="row">
+    <h2>Çalışma Planı Hazırla</h2>
+</div>
+<div class="grid">
+
+    <div class="baslik1">1-Tarih Belirle</div>
+
+    <div class="col-2">
+        <label for="tarih_baslangic">Başlangıç Tarihi:</label>
+        <input type="date" name="tarih_baslangic" id="tarih_baslangic" class="tarih">
+    </div>
+
+    <div class="col-2">
+        <label for="tarih_baslangic">Bitiş Tarihi:</label>
+        <input type="date" name="tarih_baslangic" id="tarih_baslangic" class="tarih">
+    </div>
+
+    <div class="row center">
+        <button class="button">Hesapla</button>
+    </div>
+
+</div>
+
+
+<div class="grid">
+    <div class="baslik1">2-İstisna Günleri Belirle</div>
+    
+    
+
+</div>
