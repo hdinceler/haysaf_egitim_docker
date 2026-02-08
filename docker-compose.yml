@@ -28,6 +28,8 @@ services:
       MYSQL_DATABASE: appdb
       MYSQL_USER: appuser
       MYSQL_PASSWORD: apppass
+    ports:
+      - "3307:3306"   # <-- Host ile container portunu eşle
     volumes:
       - ./mysql/data:/var/lib/mysql
     restart: unless-stopped

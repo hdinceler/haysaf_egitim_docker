@@ -28,10 +28,10 @@ define('OG_IMAGE', '/assets/images/og.png');
 date_default_timezone_set('Europe/Istanbul');
 
 // Veritabanı bağlantısı (MariaDB)
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'tercihin');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'mysql');
+define('DB_NAME', 'haysaf');
+define('DB_USER', 'appuser');
+define('DB_PASS', 'apppass');
 define('DB_CHARSET', 'utf8mb4');
 // Genel ayarlar
 define('APP_NAME', 'tercih.in');
