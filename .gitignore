@@ -1,0 +1,9 @@
+# Docker
+*.log
+
+# MySQL data
+mysql/data/
+
+# OS
+.DS_Store
+Thumbs.db
