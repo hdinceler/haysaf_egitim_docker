@@ -1,6 +1,7 @@
 <?php 
-require_once __DIR__."/controllers/tarih.php";
-require_once __DIR__."/controllers/istisna.php";
+require_once __DIR__."/controllers/c_tarih.php";
+require_once __DIR__."/controllers/c_istisna.php";
+// debug('SESSION',$_SESSION);
 ?>
 
 <?php require_once "gosterge.php"?>

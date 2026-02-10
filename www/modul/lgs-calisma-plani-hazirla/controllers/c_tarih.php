@@ -42,5 +42,5 @@ if($durum_tarih_araligi['type']==='success'){
 // debug('',$mesajlar['plan']['tarih_baslangic']);
 
 $kontrol=PLAN::tarih_araligi_dogru_girilmis();
-// debug('tarih aralığı',$kontrol);
+// debug('tarih aralığı',$durum_tarih_araligi);
 // debug('',$_SESSION);

@@ -19,16 +19,16 @@ final class PLAN{
     private const SESSION_SCHEMA = [
         'tarih_baslangic' => '',
         'tarih_bitis'     => '',
-        'gun_sayisi'      => '',
+        'gun_sayisi_istisna'      => '',
+        'gun_sayisi_net'      => '',
         'dersler'         => '',
         'uniteler'        => '',
         'rapor'           => '',
         'hata'            => [],
         'istisna'         => [
             'db'     => [],
-            'user'   => [],
-            'toplam' => [],
             'havuz'=>[],
+            'net'   => [],
         ],
     ];
 
@@ -48,7 +48,7 @@ final class PLAN{
             $buff[$key]=[
                 'title'=>$title,
                 'type'=>'error',
-                'text'=>'Boş',
+                'text'=>'...',
             ];
         }
         return $buff;

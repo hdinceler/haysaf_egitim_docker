@@ -1,4 +1,3 @@
-
 <?php 
 $butonlar=[
      ["ad"=>"tarih","text"=> "Tarih" , 'status'=>PLAN::tarih_araligi_dogru_girilmis()],
@@ -14,10 +13,10 @@ $col= round( 12 / count($butonlar)  );
 <div class="row">
     <?php foreach( $butonlar as $key=>$btn) :
         $durum=$btn['status']??'';
-        $btn_class= ($durum!== true)? 'yellow' : 'green'; 
+        $btn_class= ($durum!== true)? 'border-red' : 'border-green'; 
     ?>
-        <div class="col s<?= $col ?> border sprite lgs-ye-kac-gun-kaldi">
-            <div class="<?= $btn_class ?>">
+        <div class="col s<?= $col ?>">
+            <div class="<?= $btn_class ?> border">
                 <a href="?asama=<?= $key+1 ?>" class="btn block ">
                     <span class="block large"> <?= $key+1?> </span>
                     <?= $btn["text"] ?> 

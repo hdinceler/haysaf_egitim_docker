@@ -20,6 +20,10 @@ spl_autoload_register(function (string $class) {
         require_once $file;
     }
 });
+$auth=new Auth();
+///----------------------------------------
+/// Tüm Middleware ler
+require_once __DIR__ . '/middleware/auth.php';
 
 // -------------------------------------------------
 // GLOBAL INPUT MIDDLEWARE

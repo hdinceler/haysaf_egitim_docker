@@ -25,5 +25,7 @@ RewriteRule ^ - [L]
 # SEF URL'leri index.php'ye yönlendir
 
 
+RewriteRule ^login$ index.php?job=login [L,QSA]
  
 RewriteRule ^([a-z0-9-]+)/?$ index.php?job=$1 [L,QSA]
+

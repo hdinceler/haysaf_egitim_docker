@@ -38,8 +38,8 @@ final class DB {
         return self::$pdo;
     }
 
-    // ------------------- CREATE -------------------
-    public static function create(string $table, array $data): int {
+    // ------------------- add -------------------
+    public static function add(string $table, array $data): int {
         $pdo = self::connect();
         $data = SECURITY::sanitize($data);
 

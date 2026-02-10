@@ -27,22 +27,34 @@ trait tarih{
         $mesajlar['plan'][$key] = self::mesaj($key, $durum, 'error');
         return false;
     }
+    
+public static function tarih_araligi_getir(): array {
+    self::autoInit();
 
-    public static function tarih_araligi_getir():array{
-        self::autoInit();
-        $durum= self::tarih_araligi_kontrol( $_SESSION['plan']['tarih_baslangic'],$_SESSION['plan']['tarih_bitis'] );
-        if( $durum===true) {
-            $gun= ( strtotime($_SESSION['plan']['tarih_bitis']) - strtotime($_SESSION['plan']['tarih_baslangic']) )/ 86400;
-            return [
-            'result'=>$gun,
-            'type'=>'success',
-        ] ;
-        }
-        else return [
-            'result'=>$durum,
-            'type'=>'error',
+    $kontrol = self::tarih_araligi_kontrol(
+        $_SESSION['plan']['tarih_baslangic'],
+        $_SESSION['plan']['tarih_bitis']
+    );
+
+    if ($kontrol !== true) {
+        return [
+            'result' => 0,
+            'type'   => 'error',
+            'error'  => $kontrol
         ];
     }
+
+    $gun = (
+        strtotime($_SESSION['plan']['tarih_bitis']) -
+        strtotime($_SESSION['plan']['tarih_baslangic'])
+    ) / 86400;
+
+    return [
+        'result' => (int)$gun,
+        'type'   => 'success'
+    ];
+}
+
 
     public static function tarih_araligi_kontrol(string $baslangic,string  $bitis):bool|string{
         if($baslangic==='' || $bitis==='') return " Her iki tarih aralığı doğru seçilmeli";

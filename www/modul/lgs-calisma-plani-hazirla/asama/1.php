@@ -1,18 +1,4 @@
-<?php
-//  daha önceden geçerli bir tarih ataması var mı?
-    
-// tarih aralığı post edildiyse :
-     // başlangıç ve bitiş belirtilmiş mi
-     //başlangıç ve bitiş formata uygun mu
-     //başlangıç tarihi bitiş tarihinden küçük mü
-     // tarihileri sessiona yaz ve sonraki aşamaları temizle (plan yeniden oluşturulacak)
-// tarih başlangıç ve bitiş seçili mi
-
-
-?>
-
-
-<div class=" ">
+<div class="">
 
     <h4 class="center text-indigo margin-bottom">1. ADIM: Tarih aralığını Belirle</h4>
 
@@ -22,12 +8,12 @@
         <div class="col s6">
 
                 <label>Başlangıç Tarihi</label>
-                <input type="date" class="input border black" name="tarih_baslangic" value="<?= $_SESSION["plan"]["tarih_baslangic"]??date('Y-m-d')?>">
+                <input type="date" class="input border " name="tarih_baslangic" value="<?= $_SESSION["plan"]["tarih_baslangic"]?>">
             </div>
             <div class="col s6">
                 <label>Bitiş Tarihi</label>
-               <input type="date" class="input border black" name="tarih_bitis"
-       value="<?= htmlspecialchars($_SESSION["plan"]["tarih_bitis"] ??'', ENT_QUOTES, 'UTF-8') ?>">
+               <input type="date" class="input border " name="tarih_bitis"
+       value="<?= htmlspecialchars($_SESSION["plan"]["tarih_bitis"], ENT_QUOTES, 'UTF-8') ?>">
 
                 <input type="hidden" name="tarih_belirle">
             </div>

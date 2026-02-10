@@ -39,7 +39,7 @@
   <script src="/script.js" defer></script>
 </head>
 
-<body class="page black ">
+<body class="page ">
     <?php require_once __DIR__ . "/part/header.php"; ?>
     <main id="main" class="" role="main">
         <?php require_once __DIR__ . "/part/main.php"; ?>
