@@ -1,0 +1,10 @@
+{
+        "github.copilot-chat",
+        "github.remotehub",
+        "github.vscode-pull-request-github",
+        "ms-azuretools.vscode-containers",
+        "ms-vscode.azure-repos",
+        "ms-vscode.remote-repositories",
+        "ritwickdey.liveserver"
+
+}
