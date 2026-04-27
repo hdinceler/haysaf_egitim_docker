@@ -1,0 +1,65 @@
+.sprite {
+  width: 64px;
+  height: 64px;
+  background-image: url('/public/img/ico/64px/css-sprites.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+/* Modül ikonları */
+.bg-ogrenci {
+  background-position: -199px -199px;
+}
+
+.bg-veli-portal {
+  background-position: -133px -133px; /* veli portal ikonunu uygun pozisyona göre ayarla */
+}
+
+.bg-ogretmen-modulu {
+  background-position: -67px -67px;
+}
+
+.bg-idare-modulu {
+  background-position: -1px -199px;
+}
+
+.bg-servis-takibi {
+  background-position: -133px -1px;
+}
+
+.bg-sinav-deneme-yonetimi {
+  background-position: -1px -133px;
+}
+
+.bg-rehberlik-saglik {
+  background-position: -133px -67px;
+}
+
+.bg-sozlesme-izin-yonetimi {
+  background-position: -67px -133px;
+}
+
+.bg-bildirim-duyuru {
+  background-position: -199px -133px;
+}
+
+/* Kantin ve Yemekhane Modülleri */
+.bg-kantin-menu {
+  background-position: -1px -67px;
+}
+
+.bg-kantin-siparis {
+  background-position: -199px -1px;
+}
+
+.bg-paket-hizmetler {
+  background-position: -133px -265px;
+}
+
+/* Küçük açıklama stili */
+.button .modul-aciklama {
+    display: block;
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+}
